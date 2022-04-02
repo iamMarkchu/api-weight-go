@@ -1,0 +1,88 @@
+syntax = "proto3";
+
+package api.weight;
+
+option go_package = "api-weight-go/api/weight;weight";
+option java_multiple_files = true;
+option java_package = "api.weight";
+import "google/api/annotations.proto";
+
+service Weight {
+    // 记录体重接口
+    rpc RecordWeight (RecordWeightRequest) returns (RecordWeightReply) {
+        option (google.api.http) = {
+            post: "/weight/record",
+            body: "*"
+        };
+    };
+    // 用户体重曲线列表
+    rpc GetRecentWeight (GetRecentWeightRequest) returns (GetRecentWeightReply) {
+        option (google.api.http) = {
+            get: "/weight/getRecent",
+            body: "*"
+        };
+    };
+    // 用户按日历查月体重
+    rpc GetWeightByMonth (GetWeightByMonthRequest) returns (GetWeightByMonthReply) {
+        option (google.api.http) = {
+            get: "/weight/getByMonth",
+            body: "*"
+        };
+    }
+}
+
+// 记录体重请求
+message RecordWeightRequest {
+    // 时间戳
+    uint64 date = 1;
+    // 体重
+    float weight = 2;
+    // 图片
+    string img = 3;
+}
+
+// 记录体重响应
+message RecordWeightReply {
+    int32 code = 1;
+    string msg = 2;
+}
+
+//
+message GetRecentWeightRequest {
+    // 最近多少天, 默认720天, 最大 365*5
+    int32 latest = 1;
+}
+
+//
+message GetRecentWeightReply {
+    int32 code = 1;
+    string msg = 2;
+    GetRecentWeightData data = 3;
+}
+
+message GetRecentWeightData {
+    uint64 total = 1;
+    repeated WeightEntity list = 2;
+}
+
+message WeightEntity {
+    // id
+    uint64 id = 1;
+    // 日期
+    string date = 2;
+    // 体重值
+    float weight = 3;
+    // uid
+    uint64 uid = 4;
+}
+
+message GetWeightByMonthRequest {
+    string month = 1;
+}
+
+// 当月有体重的数据
+message GetWeightByMonthReply {
+    int32 code = 1;
+    string msg = 2;
+    GetRecentWeightData data = 3;
+}

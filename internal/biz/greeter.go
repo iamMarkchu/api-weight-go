@@ -3,9 +3,9 @@ package biz
 import (
 	"context"
 
-	v1 "api-weight-go/api/helloworld/v1"
 	"github.com/go-kratos/kratos/v2/errors"
 	"github.com/go-kratos/kratos/v2/log"
+	v1 "github.com/iamMarkchu/api-weight-go/api/helloworld/v1"
 )
 
 var (

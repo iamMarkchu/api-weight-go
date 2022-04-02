@@ -1,11 +1,11 @@
 package data
 
 import (
-	"api-weight-go/internal/biz"
-	"api-weight-go/internal/model/orm"
 	"context"
 	"errors"
 	"github.com/go-kratos/kratos/v2/log"
+	"github.com/iamMarkchu/api-weight-go/internal/biz"
+	"github.com/iamMarkchu/api-weight-go/internal/model/orm"
 	"gorm.io/gorm"
 )
 

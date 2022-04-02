@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 
-	v1 "api-weight-go/api/helloworld/v1"
-	"api-weight-go/internal/biz"
+	v1 "github.com/iamMarkchu/api-weight-go/api/helloworld/v1"
+	"github.com/iamMarkchu/api-weight-go/internal/biz"
 )
 
 // GreeterService is a greeter service.

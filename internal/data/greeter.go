@@ -3,8 +3,8 @@ package data
 import (
 	"context"
 
-	"api-weight-go/internal/biz"
 	"github.com/go-kratos/kratos/v2/log"
+	"github.com/iamMarkchu/api-weight-go/internal/biz"
 )
 
 type greeterRepo struct {

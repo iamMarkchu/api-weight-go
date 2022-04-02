@@ -1,10 +1,10 @@
 package service
 
 import (
-	pb "api-weight-go/api/weight"
-	"api-weight-go/internal/biz"
-	"api-weight-go/pkg/auth"
 	"context"
+	pb "github.com/iamMarkchu/api-weight-go/api/weight"
+	"github.com/iamMarkchu/api-weight-go/internal/biz"
+	"github.com/iamMarkchu/api-weight-go/pkg/auth"
 )
 
 type WeightService struct {

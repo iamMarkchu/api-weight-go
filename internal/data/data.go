@@ -1,10 +1,10 @@
 package data
 
 import (
-	"api-weight-go/internal/conf"
-	"api-weight-go/internal/model/orm"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"
+	"github.com/iamMarkchu/api-weight-go/internal/conf"
+	"github.com/iamMarkchu/api-weight-go/internal/model/orm"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

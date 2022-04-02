@@ -1,4 +1,4 @@
-module api-weight-go
+module github.com/iamMarkchu/api-weight-go
 
 go 1.16
 

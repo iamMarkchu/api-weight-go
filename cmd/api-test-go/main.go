@@ -1,13 +1,13 @@
 package main
 
 import (
-	"api-weight-go/internal/conf"
-	"api-weight-go/pkg/auth"
 	"flag"
 	"fmt"
 	"github.com/go-kratos/kratos/v2/config"
 	"github.com/go-kratos/kratos/v2/config/file"
 	jwtv4 "github.com/golang-jwt/jwt/v4"
+	"github.com/iamMarkchu/api-weight-go/internal/conf"
+	"github.com/iamMarkchu/api-weight-go/pkg/auth"
 	"time"
 )
 

@@ -6,13 +6,13 @@
 package main
 
 import (
-	"api-weight-go/internal/biz"
-	"api-weight-go/internal/conf"
-	"api-weight-go/internal/data"
-	"api-weight-go/internal/server"
-	"api-weight-go/internal/service"
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
+	"github.com/iamMarkchu/api-weight-go/internal/biz"
+	"github.com/iamMarkchu/api-weight-go/internal/conf"
+	"github.com/iamMarkchu/api-weight-go/internal/data"
+	"github.com/iamMarkchu/api-weight-go/internal/server"
+	"github.com/iamMarkchu/api-weight-go/internal/service"
 )
 
 // Injectors from wire.go:
